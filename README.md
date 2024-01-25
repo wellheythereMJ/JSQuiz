@@ -6,4 +6,4 @@ It uses HTML, CSS, and Javascript
 
 [Link to deployed application](https://wellheytheremj.github.io/JSQuiz/)
 
-![screenshot of password generator]()
+![screenshot of password generator](./assets/images/JSQuiz%20screenshot.png)
