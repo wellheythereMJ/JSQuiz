@@ -12,6 +12,7 @@
 // WHEN the game is over
 // THEN I can save my initials and my score 
 
+var scoreCard = document.getElementById('scorecard');
 var intro = document.getElementById("intro");
 var start_btn = document.getElementById("start-btn");
 var quiz_area = document.getElementById("quiz-area");
@@ -20,6 +21,7 @@ var choices_div = document.getElementById("choices");
 var startTime = 120;
 var timer = document.getElementById("timer");
 timer.textContent = startTime
+var clock;  
 var quiz_array = [
   {
     question: "question1",
@@ -29,22 +31,22 @@ var quiz_array = [
   {
     question: "question2",
     options:["a", "b", "c", "d"],
-    correct:"b"
+    correct:"c"
   },
   {
     question: "question3",
     options:["a", "b", "c", "d"],
-    correct:"b"
+    correct:"d"
   },
   {
     question: "question4",
     options:["a", "b", "c", "d"],
-    correct:"b"
+    correct:"a"
   },
   {
     question: "question5",
     options:["a", "b", "c", "d"],
-    correct:"b"
+    correct:"a"
   },
 ]
 var array_index = 0
@@ -54,7 +56,8 @@ var array_index = 0
 start_btn.addEventListener('click', function() {
   intro.classList.add("hide");
   quiz_area.classList.remove("hide");
-displayQuestion()
+displayQuestion();
+starTimer();
 
 })
 // document.addEventListener('click', function(event){
@@ -65,12 +68,32 @@ displayQuestion()
 //   }
 // })
 // count downs seconds from the clock stops when the seconds are empty
-function timer () {
-
+function starTimer () {
+  clock = setInterval(function(){
+    startTime --;
+    timer.textContent = startTime;
+    if (startTime <= 0){
+      clearInterval (clock)
+      gameOver();
+    }
+  }, 1000)
 }
 
 function answerChecker () {
-
+console.log(this)
+  if (this.textContent == quiz_array[array_index].correct) {
+    console.log("correct")
+  } else {
+    console.log("wrong")
+    startTime -= 10;
+  } 
+  array_index ++
+  if (array_index >= quiz_array.length) {
+    console.log("gameOver")
+    gameOver(); // start gameOver function 
+  } else {
+    displayQuestion ();
+  }
 }
 
 function displayQuestion () {
@@ -83,8 +106,18 @@ for (var i = 0; i < quiz_array [array_index].options.length; i++){
   btn.textContent = quiz_array[array_index].options[i];
   console.log(array_index)
   // add on click to button
-  
+  btn.onclick = answerChecker
   choices_div.append(btn)
 }
 // array_index++
-}
+};
+
+function gameOver () {
+  clearInterval (clock);
+  quiz_area.classList.add("hide");
+  scoreCard.classList.remove("hide");
+  // replace score goes here with what user actually needs to see 
+};
+
+// create event listener for submit button 
+// grab initials from input and save player initials and score to local storage
