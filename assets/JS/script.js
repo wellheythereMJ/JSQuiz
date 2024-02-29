@@ -120,4 +120,15 @@ function gameOver () {
 };
 
 // create event listener for submit button 
+var submit_btn = document.getElementById("Submit");
+submit_btn.addEventListener("click", function(event){
+  event.preventDefault();
+  var initials = document.getElementById("initials").value;
+  var leaderboard = JSON.parse(localStorage.getItem("leaderboard"));
+  if (leaderboard === null) {
+    leaderboard = [];
+  }
+  leaderboard.push({initials: initials, score: startTime});
+  localStorage.setItem("leaderboard", JSON.stringify(leaderboard));
+})
 // grab initials from input and save player initials and score to local storage
