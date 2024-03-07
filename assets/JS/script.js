@@ -24,22 +24,22 @@ timer.textContent = startTime
 var clock;  
 var quiz_array = [
   {
-    question: "question1",
+    question: "What is the document in html?",
     options:["a", "b", "c", "d"],
     correct:"b"
   },
   {
-    question: "question2",
+    question: "What does an index start with?",
     options:["a", "b", "c", "d"],
     correct:"c"
   },
   {
-    question: "question3",
+    question: "What does a for loop start with?",
     options:["a", "b", "c", "d"],
     correct:"d"
   },
   {
-    question: "question4",
+    question: "Where should the javascript file be linked in the index file?",
     options:["a", "b", "c", "d"],
     correct:"a"
   },
