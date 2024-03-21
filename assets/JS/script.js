@@ -130,5 +130,6 @@ submit_btn.addEventListener("click", function(event){
   }
   leaderboard.push({initials: initials, score: startTime});
   localStorage.setItem("leaderboard", JSON.stringify(leaderboard));
+  window.location.href = "highscores.html"
 })
 // grab initials from input and save player initials and score to local storage
