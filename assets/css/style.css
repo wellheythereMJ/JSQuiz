@@ -1,7 +1,69 @@
-.hide {
-  display: none;
+body {
+  margin: 0;
+  padding: 0;
 }
+
 
 h1 {
   text-align: center;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
+  background-color: black;
+  margin-bottom: 20px;
+  color: white;
+}
+.header a {
+  color: red;
+}
+.header a:visited {
+  color: white
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  min-height: 600px;
+  border: 2px solid black;
+  border-radius: 10px;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 3px 3px 3px red;
+  
+}
+
+#choices {
+  display: flex;
+  flex-direction: column;
+
+}
+#choices button {
+  margin: 5px;
+  padding: 5px;
+
+}
+
+.scorecard {
+  display: flex;
+  flex-direction: column;
+}
+/* highscores html styles below */
+
+
+
+
+/* hide class */
+.hide {
+  display: none;
+}
+@media screen and (max-width: 700px) {
+  main {
+    margin: 20px;
+  }
 }

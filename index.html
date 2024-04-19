@@ -7,8 +7,15 @@
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-  <a href="./highscores.html">Highscores
-  </a>
+  <header class="header">
+    <a href="./highscores.html">Highscores
+    </a>
+    <h1> 
+      Timer: <span id="timer"></span>
+    </h1>
+
+  </header>
+  <main class="jefe"> 
   <section id="intro">
       <h1>
         introduce the game
@@ -19,19 +26,21 @@
     <button id="start-btn">
       START
     </button>
-
   </section>
-  <h1> 
-    Timer: <span id="timer"></span>
-  </h1>
+
   <section id="quiz-area" class="hide">
     <h2 id="question">Question goes here</h2>
     <div id="choices">buttons go here</div>
   </section>
+  
   <section id="scorecard" class="hide">
-    <h2 id="score">Score goes here</h2>
+    <h2 id="score"></h2>
+    <label>Enter your initials</label>
+    <div>
     <input type="text" id="initials"><button id="Submit">Submit</button>
+    </div>
   </section>
+  </main>
   
 <script src="assets/JS/script.js"></script>
 </body>

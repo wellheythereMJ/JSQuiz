@@ -116,7 +116,9 @@ function gameOver () {
   clearInterval (clock);
   quiz_area.classList.add("hide");
   scoreCard.classList.remove("hide");
+
   // replace score goes here with what user actually needs to see 
+  document.querySelector("#score").textContent=`Your Score ${startTime} `
 };
 
 // create event listener for submit button 
