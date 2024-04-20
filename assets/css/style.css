@@ -46,7 +46,7 @@ main {
 #choices button {
   margin: 5px;
   padding: 5px;
-
+  background-color: rgba(255, 217, 0, 0.563);
 }
 
 .scorecard {
@@ -54,8 +54,6 @@ main {
   flex-direction: column;
 }
 /* highscores html styles below */
-
-
 
 
 /* hide class */
