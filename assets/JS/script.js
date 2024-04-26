@@ -36,7 +36,7 @@ var quiz_array = [
   {
     question: "In JavaScript, how do you declare a variable with block scope?",
     options:["A) var", "B) let", "C) const", "D) block"],
-    correct:"B) let (Correct)"
+    correct:"B) let"
   },
   {
     question: "Where should the JavaScript file be linked in the index file?",
