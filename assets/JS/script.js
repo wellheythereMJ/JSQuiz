@@ -24,29 +24,29 @@ timer.textContent = startTime
 var clock;  
 var quiz_array = [
   {
-    question: "What is the document in html?",
-    options:["a", "b", "c", "d"],
-    correct:"b"
+    question: "What is the root element of an HTML document?",
+    options:["A) <header>", "B) <body>", "C) <html>", "D) <div>"],
+    correct:"C) <html>"
   },
   {
     question: "What does an index start with?",
-    options:["a", "b", "c", "d"],
-    correct:"c"
+    options:["A) 0", "B) 1", "C) -1", "D) 10"],
+    correct:"A) 0"
   },
   {
-    question: "What does a for loop start with?",
-    options:["a", "b", "c", "d"],
-    correct:"d"
+    question: "In JavaScript, how do you declare a variable with block scope?",
+    options:["A) var", "B) let", "C) const", "D) block"],
+    correct:"B) let (Correct)"
   },
   {
-    question: "Where should the javascript file be linked in the index file?",
-    options:["a", "b", "c", "d"],
-    correct:"a"
+    question: "Where should the JavaScript file be linked in the index file?",
+    options:["A) It doesn't matter", "B) After the closing <body> tag", "C) Inside the <head> tag", "D) Inside the <body> tag, but before any content"],
+    correct:"D) Inside the <body> tag, but before any content"
   },
   {
-    question: "question5",
-    options:["a", "b", "c", "d"],
-    correct:"a"
+    question: "Which method is used to add a new element to the end of an array?",
+    options:["A) push()", "B) append()", "C) addToEnd()", "D) concat()"],
+    correct:"A) push()"
   },
 ]
 var array_index = 0
