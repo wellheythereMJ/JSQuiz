@@ -3,7 +3,6 @@ body {
   padding: 0;
 }
 
-
 h1 {
   text-align: center;
 }
@@ -18,11 +17,13 @@ h1 {
   margin-bottom: 20px;
   color: white;
 }
+
 .header a {
   color: red;
 }
+
 .header a:visited {
-  color: white
+  color: white;
 }
 
 main {
@@ -35,14 +36,13 @@ main {
   margin: 0 auto;
   padding: 20px;
   box-shadow: 3px 3px 3px red;
-  
 }
 
 #choices {
   display: flex;
   flex-direction: column;
-
 }
+
 #choices button {
   margin: 5px;
   padding: 5px;
@@ -53,13 +53,11 @@ main {
   display: flex;
   flex-direction: column;
 }
-/* highscores html styles below */
 
-
-/* hide class */
 .hide {
   display: none;
 }
+
 @media screen and (max-width: 700px) {
   main {
     margin: 20px;
